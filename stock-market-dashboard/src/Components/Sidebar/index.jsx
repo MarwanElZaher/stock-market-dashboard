@@ -20,7 +20,7 @@ function Sidebar({ className }) {
 
         <nav className={className}>
             <div
-                className="bg-[#181818] text-white w-90 transition-all duration-300 overflow-y-auto"
+                className="bg-[#181818] text-white w-90 transition-all duration-300 overflow-y-auto shadow-custom "
                 style={{ width: expanded ? '180px' : '90px', height: '100%' }}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -36,7 +36,7 @@ function Sidebar({ className }) {
                 </div>
                 <div className='flex justify-between flex-col fixed bottom-0 m-2 overflow-hidden'>
                     <ProfileAvatar isExpanded={expanded} />
-                    {expanded && <p className='flex justify-center overflow-hidden'>street suite. 2.0</p>}
+                    {expanded && <p className='flex justify-center overflow-hidden text-[#424242]'>street suite. 2.0</p>}
                 </div>
             </div>
         </nav>
