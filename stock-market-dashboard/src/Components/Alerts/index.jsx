@@ -1,18 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { mockData } from '../../mockedData.js';
 import AlertsHeader from '../AlertsHeader/index.jsx';
 import AlertsCell from '../AlertsCell/index.jsx';
-import dollarTicket from '../../icons/dollarTicket.svg'
-import rateIcon from '../../icons/rateIcon.svg'
-import riskIcon from '../../icons/riskIcon.svg'
-import stockIcon from '../../icons/stockIcon.svg'
+import dollarTicket from '../../icons/dollarTicket.svg';
+import rateIcon from '../../icons/rateIcon.svg';
+import riskIcon from '../../icons/riskIcon.svg';
+import stockIcon from '../../icons/stockIcon.svg';
 
 export default function Alerts({ className }) {
   const [alerts, setAlerts] = useState(mockData);
+
   return (
-    <div className={className}>
-      <div className="p-4">
+    <div className={`${className} flex flex-col h-full`}>
+      <div className="p-4 bg-[#202020] sticky top-0 z-10">
         <AlertsHeader />
+      </div>
+      <div className="flex-1 overflow-y-auto flex-grow scrollbar-thin scrollbar-thumb-[#424242] scrollbar-track-[#202020] p-4">
         <ul className="space-y-4">
           {alerts.map(alert => (
             <li key={alert?.id} className="p-4 border rounded-lg flex flex-col justify-center items-center">
@@ -27,5 +30,5 @@ export default function Alerts({ className }) {
         </ul>
       </div>
     </div>
-  )
+  );
 }
