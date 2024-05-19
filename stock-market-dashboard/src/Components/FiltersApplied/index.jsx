@@ -3,12 +3,13 @@ function FiltersApplied({ selectedFilters, onClearFilter }) {
     return (
         <div className="flex items-center space-x-2 p-4 mb-3 bg-[#202020] rounded-md">
             {selectedFilters.map((filter, index) => (
+                filter.type === "industry" &&
                 <button
                     key={index}
                     onClick={() => onClearFilter(filter)}
                     className="bg-gray-200 px-2 py-1 rounded-md"
                 >
-                    {filter}
+                    {filter.value}
                 </button>
             ))}
         </div>
