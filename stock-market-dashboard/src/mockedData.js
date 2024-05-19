@@ -216,3 +216,18 @@ export const filterMockData = {
     'Futures',
   ],
 };
+
+
+export const imageMapping = {
+  "healthcare":'../../icons/Healthcare.svg',
+  "materials": "../../icons/Materials.svg",
+  "energy": "../../icons/Energy.svg",
+  "consumerdiscretionary": "../../icons/ConsumerDesc.svg",
+  "consumerstapies": "../../icons/ConsumerStap.svg",
+  "realestate": "../../icons/RealEstate.svg",
+  "it": "../../icons/It.svg",
+  "communication": "../../icons/Communication.svg",
+  "industries": "../../icons/Industries.svg",
+  "utilities": "../../icons/Utilities.svg",
+  "financials": "../../icons/Financials.svg",
+}

@@ -18,24 +18,14 @@ function Filters() {
 
     // Function to apply filter
     const applyFilter = (filterType, filterValue) => {
-        // Add filter to selected filters array
-        setSelectedFilters([...selectedFilters, { type: filterType, value: filterValue }]);
-        // Apply filter to mockData
-        console.log(mockData)
-        const filtered = mockData.filter((item) => {
-            if (filterType === "industry") {
-                return item.industry === filterValue;
-            }
-            if (filterType === "marketCap") {
-                return item.marketCap === filterValue;
-            }
-            if (filterType === "riskLevel") {
-                return item.riskLevel === filterValue;
-            }
-            // Add more conditions for other filter types if needed
-        });
-        // Update filtered mockData state
-        setFilteredData(filtered);
+        const filterExists = selectedFilters.some(
+            (filter) => filter.type === filterType && filter.value === filterValue
+        );
+    
+        if (!filterExists) {
+            // Add filter to selected filters array
+            setSelectedFilters([...selectedFilters, { type: filterType, value: filterValue }]);
+        }
     };
 
     // Function to clear all filters
@@ -100,8 +90,8 @@ function Filters() {
                 text="Industry"
                 applyFilter={(value) => applyFilter("industry", value)}
             />
-
-            <FilterDropDownComponent
+            <div className='flex flex-row justify-between p-4'>
+                <FilterDropDownComponent
                 isComponentVisible={dropdownVisibility.marketCap}
                 toggleVisibility={() => toggleDropdownVisibility('marketCap')}
                 filterData={filterMockData.marketCaps}
@@ -114,7 +104,9 @@ function Filters() {
                 filterData={filterMockData.riskLevels}
                 text="Risk Level"
                 applyFilter={(value) => applyFilter("riskLevel", value)}
-            />
+                />
+            </div>
+          
             {/* Apply button */}
             <div className='flex justify-center'>
                 <button className="bg-[#53ACFF] text-white px-12 py-2 rounded-md" onClick={applyFiltersToData}>Apply</button>

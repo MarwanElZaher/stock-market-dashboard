@@ -20,8 +20,7 @@ function Sidebar({ className }) {
 
         <nav className={className}>
             <div
-                className="bg-[#181818] text-white w-90 transition-all duration-300 overflow-y-auto shadow-custom "
-                style={{ width: expanded ? '180px' : '90px', height: '100%' }}
+                className={`bg-[#181818] text-white transition-all duration-300 overflow-y-auto shadow-custom h-screen hover:w-18 ${expanded ? 'w-18' : 'w-90'}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
 

@@ -5,7 +5,7 @@ import Sidebar from './Components/Sidebar';
 function App() {
   return (
     <main className='flex h-screen relative'>
-      <Sidebar className='navbar absolute h-full overflow-y-hidden w-1/4 z-20' />
+      <Sidebar className='navbar absolute h-full overflow-y-hidden w-1/8 z-20' />
       <div className="flex-1 bg-[#202020] overflow-y-auto ">
         <Alerts className='ml-24 alert h-full' />
       </div>
