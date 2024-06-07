@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/stock-market-dashboard/static/css/main.d69bb724.css",
+    "main.js": "/stock-market-dashboard/static/js/main.4c811668.js",
+    "static/js/453.fc50da77.chunk.js": "/stock-market-dashboard/static/js/453.fc50da77.chunk.js",
+    "static/media/logo.png": "/stock-market-dashboard/static/media/logo.cee54732eb3643f9df54.png",
+    "static/media/automation.svg": "/stock-market-dashboard/static/media/automation.0108ed35447ca4913ade33e086e87657.svg",
+    "static/media/Materials.svg": "/stock-market-dashboard/static/media/Materials.b152eecd9138482a43eb0167dbfe25c0.svg",
+    "static/media/Utilies.svg": "/stock-market-dashboard/static/media/Utilies.43c81073ed2de042a44bc5bd8c17f72c.svg",
+    "static/media/riskIcon.svg": "/stock-market-dashboard/static/media/riskIcon.4cab643abade9ccd68b93d0b353f68a7.svg",
+    "static/media/RealEstate.svg": "/stock-market-dashboard/static/media/RealEstate.36df25f5447e67aed919a927d3714a98.svg",
+    "static/media/It.svg": "/stock-market-dashboard/static/media/It.2ac72028227060d379b091ebe3ef0d56.svg",
+    "static/media/Financials.svg": "/stock-market-dashboard/static/media/Financials.ba3654672cd914dafceddb8d8d7db338.svg",
+    "static/media/Energy.svg": "/stock-market-dashboard/static/media/Energy.755b52bf41ba4ab9a4fccec3d56f65d8.svg",
+    "static/media/dollarTicket.svg": "/stock-market-dashboard/static/media/dollarTicket.78cd1577dd80de738c5e4c4226261877.svg",
+    "static/media/HealthCare.svg": "/stock-market-dashboard/static/media/HealthCare.b321c69d6a9df309bd5a12ad928e8cf7.svg",
+    "static/media/Communication.svg": "/stock-market-dashboard/static/media/Communication.d74c45775a58845b6ef8a8f2734df61d.svg",
+    "static/media/rateIcon.svg": "/stock-market-dashboard/static/media/rateIcon.4e288d191707b5b347f2f659e3fda0ed.svg",
+    "static/media/ConsumerStap.svg": "/stock-market-dashboard/static/media/ConsumerStap.ccb9686e474b2b3f709c0abeb6ee5a4e.svg",
+    "static/media/Industries.svg": "/stock-market-dashboard/static/media/Industries.5daf32dc8eb0f3cc663774ade154f9a7.svg",
+    "static/media/stockIcon.svg": "/stock-market-dashboard/static/media/stockIcon.abc269278d78b8eea174d3696aeced88.svg",
+    "static/media/traning.svg": "/stock-market-dashboard/static/media/traning.41d129af58bf69100dc9be7240ea128b.svg",
+    "static/media/portfolio.svg": "/stock-market-dashboard/static/media/portfolio.07415eb65572fd1bb24e5228434e1e1e.svg",
+    "static/media/ConsumerDesc.svg": "/stock-market-dashboard/static/media/ConsumerDesc.3ba08ea01d5125be2c5e4dc61e5a9f69.svg",
+    "static/media/alert.svg": "/stock-market-dashboard/static/media/alert.c40e484ab8b9c8abb43d4f7896a9db40.svg",
+    "index.html": "/stock-market-dashboard/index.html",
+    "static/media/search.svg": "/stock-market-dashboard/static/media/search.4aaca9caec1141d4dff7db01d5ae647f.svg",
+    "static/media/trading.svg": "/stock-market-dashboard/static/media/trading.a74909dbfc4b912e054b956a3d72ffca.svg",
+    "static/media/DropDownIcon.svg": "/stock-market-dashboard/static/media/DropDownIcon.c96bca9997aeeaef3649b777236d4635.svg",
+    "main.d69bb724.css.map": "/stock-market-dashboard/static/css/main.d69bb724.css.map",
+    "main.4c811668.js.map": "/stock-market-dashboard/static/js/main.4c811668.js.map",
+    "453.fc50da77.chunk.js.map": "/stock-market-dashboard/static/js/453.fc50da77.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d69bb724.css",
+    "static/js/main.4c811668.js"
+  ]
+}
