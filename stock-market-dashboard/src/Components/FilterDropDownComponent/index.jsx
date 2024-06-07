@@ -1,19 +1,7 @@
 import React from "react";
 import DropDownIcon from '../../icons/DropDownIcon.svg'
-// export const imageMapping = {
-//   "healthcare":'../../icons/Healthcare.svg',
-//   "materials": "../../icons/Materials.svg",
-//   "energy": "../../icons/Energy.svg",
-//   "consumerdiscretionary": "../../icons/ConsumerDesc.svg",
-//   "consumerstapies": "../../icons/ConsumerStap.svg",
-//   "realestate": "../../icons/RealEstate.svg",
-//   "it": "../../icons/It.svg",
-//   "communication": "../../icons/Communication.svg",
-//   "industries": "../../icons/Industries.svg",
-//   "utilities": "../../icons/Utilities.svg",
-//   "financials": "../../icons/Financials.svg",
-// }
-// {require(`${imageMapping[option.toLowerCase().replace(/\s/g, '')]}`).default}
+import getImage from "../../Utils";
+
 function FilterDropDownComponent({ isComponentVisible, toggleVisibility, filterData, applyFilter, text }) {
     return (    
         <div className="mt-4">
@@ -26,8 +14,8 @@ function FilterDropDownComponent({ isComponentVisible, toggleVisibility, filterD
                     {filterData.map((option, index) => (
                         text === "Industry" ? (
                             <div onClick={() => applyFilter(option)} key={index} className="flex flex-row border-l-2 border-white pl-1">
-                                <img src="" alt={option} className="cursor-pointer"/> 
-                                <div className="text-white cursor-pointer py-1 text-xs font-normal">
+                                <img src={getImage(option)} alt={option} className="cursor-pointer mx-2 filter brightness-0 invert"/> 
+                                <div className="text-white cursor-pointer py-1 text-xs font-normal flex align-center">
                                     {option}
                                     {console.log(option)}   
                                 </div>
