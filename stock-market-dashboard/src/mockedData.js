@@ -90,7 +90,7 @@ export const mockData = [
     rateChange: 0.05,
     direction: "increased",
     riskLevel: "low risk",
-    industry: "Consumer Staples",
+    industry: "Consumer Stapies",
     marketCap: "Large Cap",
     strategy: "Short Reports",
     assets: "Stocks",
@@ -196,9 +196,9 @@ export const filterMockData = {
     'Financials',
   ],
   marketCaps: [
-    'Micro',
-    'Small',
-    'Large',
+    'Micro Cap',
+    'Small Cap',
+    'Large Cap',
   ],
   riskLevels: [
     'Low Risk',

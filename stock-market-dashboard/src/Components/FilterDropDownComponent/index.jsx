@@ -17,7 +17,6 @@ function FilterDropDownComponent({ isComponentVisible, toggleVisibility, filterD
                                 <img src={getImage(option)} alt={option} className="cursor-pointer mx-2 filter brightness-0 invert"/> 
                                 <div className="text-white cursor-pointer py-1 text-xs font-normal flex align-center">
                                     {option}
-                                    {console.log(option)}   
                                 </div>
                             </div>
                         ) : (

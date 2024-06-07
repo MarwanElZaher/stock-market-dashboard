@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
-// import FilterOptions from './Components/FilterOptions'; // Create FilterOptions component for the filter options
-import { mockData } from '../../mockedData.js'; // Import mocked mockData if needed
-import { filterMockData } from '../../mockedData.js';
+import React, { useEffect, useState } from 'react';
+import { mockData, filterMockData } from '../../mockedData.js'; // Import mocked mockData if needed
 import FiltersApplied from '../FiltersApplied/index.jsx';
 import SearchBar from '../SearchBar/index.jsx';
 import FilterDropDownComponent from '../FilterDropDownComponent/index.jsx';
 
-function Filters() {
-    const [filterData, setFilteredData] = useState([])
-    const [selectedFilters, setSelectedFilters] = useState([]); // State to store applied filters
+function Filters({setFilteredData}) {
+    const [selectedFilters, setSelectedFilters] = useState([]);
     const [dropdownVisibility, setDropdownVisibility] = useState({
         industry: false,
         marketCap: false,
         riskLevel: false,
     });
-    const [tempSelectedFilters, setTempSelectedFilters] = useState([]);
-
+    useEffect(() => {
+        if (mockData) {
+        setFilteredData(mockData)
+        }
+    }, [])
+    useEffect(() => {
+        if (!selectedFilters.length > 0) {
+        setFilteredData(mockData)
+    }}, [selectedFilters])
     // Function to apply filter
     const applyFilter = (filterType, filterValue) => {
         const filterExists = selectedFilters.some(
@@ -40,7 +44,9 @@ function Filters() {
         setSelectedFilters(newFilters);
 
         const filtered = mockData.filter((item) => {
-            return newFilters.every(filter => item[filter.type.toLowerCase()] === filter.value);
+            return newFilters.some(filter =>  (item[filter.type])
+            .replace(/\s+/g, '')
+            .toLowerCase() === filter.value.replace(/\s+/g, '').toLowerCase());
         });
 
         setFilteredData(filtered);
@@ -52,10 +58,13 @@ function Filters() {
         });
     };
     const applyFiltersToData = () => {
-        setSelectedFilters(tempSelectedFilters);
 
         const filtered = mockData.filter((item) => {
-            return tempSelectedFilters.every(filter => item[filter.type.toLowerCase()] === filter.value);
+            return selectedFilters.some(filter => 
+                (item[filter.type])
+                    .replace(/\s+/g, '') // Remove all spaces
+                    .toLowerCase() === filter.value.replace(/\s+/g, '').toLowerCase()
+            );
         });
 
         setFilteredData(filtered);
@@ -109,7 +118,7 @@ function Filters() {
           
             {/* Apply button */}
             <div className='flex justify-center'>
-                <button className="bg-[#53ACFF] text-white px-12 py-2 rounded-md" onClick={applyFiltersToData}>Apply</button>
+                <button className="bg-[#53ACFF] text-white px-12 py-2 rounded-md" onClick={applyFiltersToData} disabled={selectedFilters.length == 0} >Apply</button>
             </div>
         </div>
     );

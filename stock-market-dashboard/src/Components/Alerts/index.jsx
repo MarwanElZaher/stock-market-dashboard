@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { mockData } from '../../mockedData.js';
 import AlertsHeader from '../AlertsHeader/index.jsx';
 import AlertsCell from '../AlertsCell/index.jsx';
 import dollarTicket from '../../icons/dollarTicket.svg';
@@ -7,8 +6,7 @@ import rateIcon from '../../icons/rateIcon.svg';
 import riskIcon from '../../icons/riskIcon.svg';
 import stockIcon from '../../icons/stockIcon.svg';
 
-export default function Alerts({ className }) {
-  const [alerts, setAlerts] = useState(mockData);
+export default function Alerts({ className, filteredData }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const handleSelect = (index) => {
     if (selectedIndex === index) {
@@ -25,7 +23,7 @@ export default function Alerts({ className }) {
       </div>
       <div className="flex-1 overflow-y-auto flex-grow scrollbar-thin scrollbar-thumb-[#424242] scrollbar-track-[#202020] p-2 mx-3">
         <ul className="space-y-4">
-          {alerts.map((alert, index) => (
+          {filteredData.map((alert, index) => (
             <div key={alert?.id} onClick={() => handleSelect(index)} className='cursor-pointer'>
             <li className="p-4 border rounded-lg flex flex-col justify-between bg-[#313131]" >
               <div className="flex flex-row items-center justify-between">
