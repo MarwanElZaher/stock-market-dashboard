@@ -10,9 +10,9 @@ function FiltersApplied({ selectedFilters, onClearFilter }) {
                     onClick={() => onClearFilter(filter)}
                     className="bg-gray-200 px-2 py-1 rounded-md"
                     >
-                        <div className="flex flex-row items-center justify-between">
+                        <div className="flex flex-row items-center justify-between whitespace-nowrap">
                         {filter.value}
-                            <img src={getImage(filter?.value)} alt={filter?.value} className="p-1"/>
+                            <img src={getImage(filter?.value)} alt={filter?.value} className="p-1 mx-1"/>
                             </div>
                 </button>
             ))}

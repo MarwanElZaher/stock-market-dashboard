@@ -28,7 +28,7 @@ export default function Alerts({ className }) {
           {alerts.map((alert, index) => (
             <div key={alert?.id} onClick={() => handleSelect(index)} className='cursor-pointer'>
             <li className="p-4 border rounded-lg flex flex-col justify-between bg-[#313131]" >
-              <div className="flex flex-row items-center justify-around">
+              <div className="flex flex-row items-center justify-between">
                 <AlertsCell hasVerticalLine={false} iconSrc={dollarTicket} data={alert?.symbol} />
                 <AlertsCell hasVerticalLine={true} iconSrc={stockIcon} data={alert?.price} />
                 <AlertsCell hasVerticalLine={true} iconSrc={rateIcon} alertDirection={alert?.direction} data={`${alert?.rateChange}%`} />
